@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="dark">
+
+  <head>
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-CvjWuEwJgC7ZGzfJc8s4WszsXLtRscCDfYchzn1M/j7eIovwMkA7P/Ajjq3X9dV+ie2I/PnJ7nsYfYI8W7l57w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* Additional CSS */
+      body {
+        background-color: #1F2937;
+        color: #f9fafb;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      input[type="number"] {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        border-radius: 0.25rem;
+        border: none;
+        background-color: #374151;
+        color: #f9fafb;
+      }
+      button[type="submit"] {
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        border-radius: 0.25rem;
+        border: none;
+        background-color: #60a5fa;
+        color: #f9fafb;
+        transition: background-color 0.2s ease;
+        align-items: center;
+      }
+      button[type="submit"]:hover {
+        background-color: #3b82f6;
+        cursor: pointer;
+        align-items: center;
+      }
+      p {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-8">Salary Calculator</h1>
+      <form method="POST" action="/" class="flex flex-col items-center">
+        <div class="flex flex-col items-center">
+          <label for="basic-salary" class="text-lg font-medium mb-2">Basic Salary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input type="number" id="basic-salary" name="basic_salary" value="120000" class="w-full">
+        </div>
+        <div class="flex flex-col items-center">
+          <label for="total-allowances" class="text-lg font-medium mb-2">Total Allowances:</label>
+          <input type="number" id="total-allowances" name="total_allowances" value="10000" class="w-full">
+        </div>
+    
+        <center>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full mt-8">Calculate</button>
+        </center>
+      </form>
+      
+        <p class="text-2xl mt-8">Monthly Net Salary is 118600.0</p>
+      
+    </div>
+  </body>
+
+</html>

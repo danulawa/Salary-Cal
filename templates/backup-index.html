@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="dark">
+
+  <head>
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-CvjWuEwJgC7ZGzfJc8s4WszsXLtRscCDfYchzn1M/j7eIovwMkA7P/Ajjq3X9dV+ie2I/PnJ7nsYfYI8W7l57w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600&display=swap" rel="stylesheet">
+    <style>
+      /* Additional CSS */
+      body {
+        background-color: #1f2937;
+        color: #f9fafb;
+        font-family: 'Work Sans', sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+      }
+      .container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 5vh;
+      }
+      input[type="number"] {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        border-radius: 0.25rem;
+        border: none;
+        background-color: #374151;
+        color: #f9fafb;
+        font-family: 'Work Sans', sans-serif;
+      }
+      button[type="submit"] {
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        border-radius: 0.25rem;
+        border: none;
+        background-color: #0173fd;
+        color: #f9fafb;
+        transition: background-color 0.2s ease;
+        font-family: 'Work Sans', sans-serif;
+      }
+      button[type="submit"]:hover {
+        background-color: #0058c4;
+        cursor: pointer;
+        font-family: 'Work Sans', sans-serif;
+      }
+      p {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        font-family: 'Work Sans', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-8">Salary Calculator</h1>
+       <form method="POST" action="{{ url_for('home') }}"> <!--class="flex flex-col items-center" -->
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Basic Salary</span><br>
+          <input type="number" class="form-control" id="basic-salary" name="basic_salary" aria-describedby="basic-addon3" value="{{ request.form['basic_salary'] }}">
+        </div> <br><br>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Total Allowances</span><br>
+          <input type="number" class="form-control" id="total-allowances" name="total_allowances" aria-describedby="basic-addon3" value="{{ request.form['total_allowances'] }}">
+        </div> <br><br>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Total Deductions</span><br>
+          <input type="number" class="form-control" id="total-deductions" name="total_deductions" aria-describedby="basic-addon3" value="{{ request.form['total_deductions'] }}">
+        </div> <br><br>
+
+
+<!--         <div class="flex flex-col items-center">
+          <label for="basic-salary" class="text-lg font-medium mb-2">Basic Salary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input type="number" id="basic-salary" name="basic_salary" value="{{ request.form['basic_salary'] }}" class="w-full">
+        </div>
+        <div class="flex flex-col items-center">
+          <label for="total-allowances" class="text-lg font-medium mb-2">Total Allowances:</label>
+          <input type="number" id="total-allowances" name="total_allowances" value="{{ request.form['total_allowances'] }}" class="w-full">
+        </div>
+        <div class="flex flex-col items-center">
+          <label for="total-deductions" class="text-lg font-medium mb-2">Total Deductions:</label>
+          <input type="number" id="total-deductions" name="total_deductions" value="{{ request.form['total_deductions'] }}" class="w-full">
+        </div> -->
+    
+        <center>
+          <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full mt-8">Calculate</button>
+        </center>
+      </form>
+    </div>
+
+    <div class="container2">
+      {% if income_tax %}
+        <p class="text-2xl mt-8">Monthly Income Tax is {{ income_tax }}</p>
+      {% endif %}
+    </div>
+
+    <div class="container2">
+      {% if net_salary %}
+        <p class="text-2xl mt-8">Monthly Net Salary is {{ net_salary }}</p>
+      {% endif %}
+    </div>
+    
+  </body>
+
+</html>

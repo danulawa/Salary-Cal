@@ -17,14 +17,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 50vh;
+        height: 80vh;
       }
       .container2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 10vh;
+        height: 5vh;
       }
       input[type="number"] {
         padding: 0.5rem;
@@ -61,8 +61,25 @@
   <body>
     <div class="container">
       <h1 class="text-4xl font-bold mb-8">Salary Calculator</h1>
-      <form method="POST" action="{{ url_for('home') }}" class="flex flex-col items-center">
-        <div class="flex flex-col items-center">
+       <form method="POST" action="{{ url_for('home') }}"> <!--class="flex flex-col items-center" -->
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Basic Salary</span><br>
+          <input type="number" class="form-control" id="basic-salary" name="basic_salary" aria-describedby="basic-addon3" value="{{ request.form['basic_salary'] }}">
+        </div> <br><br>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Total Allowances</span><br>
+          <input type="number" class="form-control" id="total-allowances" name="total_allowances" aria-describedby="basic-addon3" value="{{ request.form['total_allowances'] }}">
+        </div> <br><br>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Total Deductions</span><br>
+          <input type="number" class="form-control" id="total-deductions" name="total_deductions" aria-describedby="basic-addon3" value="{{ request.form['total_deductions'] }}">
+        </div> <br><br>
+
+
+<!--         <div class="flex flex-col items-center">
           <label for="basic-salary" class="text-lg font-medium mb-2">Basic Salary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <input type="number" id="basic-salary" name="basic_salary" value="{{ request.form['basic_salary'] }}" class="w-full">
         </div>
@@ -70,12 +87,23 @@
           <label for="total-allowances" class="text-lg font-medium mb-2">Total Allowances:</label>
           <input type="number" id="total-allowances" name="total_allowances" value="{{ request.form['total_allowances'] }}" class="w-full">
         </div>
+        <div class="flex flex-col items-center">
+          <label for="total-deductions" class="text-lg font-medium mb-2">Total Deductions:</label>
+          <input type="number" id="total-deductions" name="total_deductions" value="{{ request.form['total_deductions'] }}" class="w-full">
+        </div> -->
     
         <center>
           <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-full mt-8">Calculate</button>
-      </center>
+        </center>
       </form>
     </div>
+
+    <div class="container2">
+      {% if income_tax %}
+        <p class="text-2xl mt-8">Monthly Income Tax is {{ income_tax }}</p>
+      {% endif %}
+    </div>
+
     <div class="container2">
       {% if net_salary %}
         <p class="text-2xl mt-8">Monthly Net Salary is {{ net_salary }}</p>

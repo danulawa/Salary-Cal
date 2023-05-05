@@ -58,11 +58,10 @@ background-color: #3B82F6;
 cursor: pointer;
 }
 
-.text-2xl {
-font-size: 1.5rem;
-margin-top: 2rem;
+.text-xl {
+font-size: 10rem;
 }
 
-.text-2xl-2 {
-    font-size: 1.5rem;
+.output-space {
+margin-top: 2rem;
 }

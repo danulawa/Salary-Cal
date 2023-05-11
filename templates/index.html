@@ -21,7 +21,19 @@
 
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon3">Pegged Currency</span><br>
-            <input type="text" class="form-control" id="pegged-currency" name="pegged_currency" aria-describedby="basic-addon3" value="{{ request.form['pegged_currency'] }}">
+            <select class="form-select form-control" id="pegged-currency" name="pegged_currency" aria-describedby="basic-addon3">
+              <option value="LKR" {{ 'selected' if request.form['pegged_currency'] == 'LKR' }}>LKR</option>
+              <option value="USD" {{ 'selected' if request.form['pegged_currency'] == 'USD' }}>USD</option>
+              <option value="GBP" {{ 'selected' if request.form['pegged_currency'] == 'GBP' }}>GBP</option>
+              <option value="AUD" {{ 'selected' if request.form['pegged_currency'] == 'AUD' }}>AUD</option>
+              <option value="EUR" {{ 'selected' if request.form['pegged_currency'] == 'EUR' }}>EUR</option>
+              <!-- Add more options as needed -->
+            </select>
+            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
+              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" />
+              </svg>
+            </div>
           </div>
 
           <div class="input-group mb-3">

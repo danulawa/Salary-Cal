@@ -20,6 +20,11 @@
         <form method="POST" action="{{ url_for('home') }}"> <!--class="flex flex-col items-center" -->
 
           <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">Pegged Currency</span><br>
+            <input type="text" class="form-control" id="pegged-currency" name="pegged_currency" aria-describedby="basic-addon3" value="{{ request.form['pegged_currency'] }}">
+          </div>
+
+          <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon3">Basic Salary</span><br>
             <input type="number" class="form-control" id="basic-salary" name="basic_salary" aria-describedby="basic-addon3" value="{{ request.form['basic_salary'] }}">
           </div>

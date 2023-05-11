@@ -1,3 +1,3 @@
 # Salary-Cal
 
-Small flask app to calculate net salary according to new tax rules
+A salary calculator based on Sri Lanka's Tax policies and EPF/ETF policies. Those who having pegged salaries can insert currency and foreign currency rates and get the output in LKR

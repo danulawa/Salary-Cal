@@ -53,7 +53,7 @@ def home():
 
             payload_1 = {}
             headers_1 = {
-            "apikey": "fRq5sWPRvOY0io8V8C4nieQajxGtNCG8"
+            "apikey": "QqHPV8tIj6KcqqQkNXdFUCO5fD8mzJ7Q"
             }
 
             response_1 = requests.request("GET", url_1, headers=headers_1, data = payload_1)
@@ -79,7 +79,7 @@ def home():
 
             payload_2 = {}
             headers_2 = {
-            "apikey": "fRq5sWPRvOY0io8V8C4nieQajxGtNCG8"
+            "apikey": "QqHPV8tIj6KcqqQkNXdFUCO5fD8mzJ7Q"
             }
 
             response_2 = requests.request("GET", url_2, headers=headers_2, data = payload_2)
@@ -105,7 +105,7 @@ def home():
 
             payload_3 = {}
             headers_3 = {
-            "apikey": "fRq5sWPRvOY0io8V8C4nieQajxGtNCG8"
+            "apikey": "QqHPV8tIj6KcqqQkNXdFUCO5fD8mzJ7Q"
             }
 
             response_3 = requests.request("GET", url_3, headers=headers_3, data = payload_3)
@@ -130,7 +130,7 @@ def home():
 
             payload_4 = {}
             headers_4 = {
-            "apikey": "fRq5sWPRvOY0io8V8C4nieQajxGtNCG8"
+            "apikey": "QqHPV8tIj6KcqqQkNXdFUCO5fD8mzJ7Q"
             }
 
             response_4 = requests.request("GET", url_4, headers=headers_4, data = payload_4)

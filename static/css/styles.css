@@ -16,7 +16,7 @@ justify-content: center;
 }
 
 .top-space{
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
 .form-group {
@@ -64,4 +64,8 @@ font-size: 10rem;
 
 .output-space {
 margin-top: 2rem;
+}
+
+.output-space-2 {
+    margin-top: 1rem;
 }

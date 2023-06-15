@@ -1,4 +1,3 @@
-from asyncio.streams import FlowControlMixin
 from flask import Flask, render_template, request
 
 import extract_gbp

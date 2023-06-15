@@ -113,7 +113,7 @@ def home():
             converted_deductions = deductions*lkr_rate
 
 
-        ##Formatting converted valuesS
+        ##Formatting converted values
         ################################################################
 
         converted_annual = int(converted_annual)

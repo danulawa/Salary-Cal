@@ -29,4 +29,4 @@ with open("exchange_rates.pdf", "rb") as file:
 
             matches = re.findall(r"\d+\.\d+", selling_rate_text)
 
-print(matches[1])
+print(matches[0])

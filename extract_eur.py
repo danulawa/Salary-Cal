@@ -29,7 +29,7 @@ def extract_eur():
 
             matches = re.findall(r"\d+\.\d+", selling_rate_text)
 
-            return matches[1]
+            return matches[0]
 
     # Return None if the USD selling rate is not found
     return None
